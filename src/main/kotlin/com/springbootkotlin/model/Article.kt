@@ -1,4 +1,4 @@
-package com.springbootkotlin
+package com.springbootkotlin.model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -10,7 +10,7 @@ import java.time.LocalDateTime
 data class Article(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: Long? = null,
     var title: String,
     var content: String,
     val createdAt: LocalDateTime = LocalDateTime.now()
